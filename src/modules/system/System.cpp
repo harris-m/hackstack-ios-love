@@ -201,6 +201,52 @@ bool System::getConstant(System::PowerState in, const char *&out)
 	return powerStates.find(in, out);
 }
 
+#if defined(LOVE_IOS)
+bool System::getConstant(const char *in, System::TapticFeedback &out)
+{
+	return tapticFeedbacks.find(in, out);
+}
+
+bool System::getConstant(System::TapticFeedback in, const char *&out)
+{
+	return tapticFeedbacks.find(in, out);
+}
+	
+std::vector<std::string> System::getConstants(System::TapticFeedback)
+{
+	return tapticFeedbacks.getNames();
+}
+    
+void System::taptic(TapticFeedback FeedbackType) {
+	switch (FeedbackType) {
+		case TAPTIC_IMPACT_LIGHT:
+			TapticEngine_Impact(IMPACT_LIGHT);
+			break;
+		case TAPTIC_IMPACT_MEDIUM:
+			TapticEngine_Impact(IMPACT_MEDIUM);
+			break;
+		case TAPTIC_IMPACT_HEAVY:
+			TapticEngine_Impact(IMPACT_HEAVY);
+			break;
+		case TAPTIC_NOTIFICATION_SUCCESS:
+			TapticEngine_Notification(NOTIFICATION_SUCCESS);
+			break;
+		case TAPTIC_NOTIFICATION_WARNING:
+			TapticEngine_Notification(NOTIFICATION_WARNING);
+			break;
+		case TAPTIC_NOTIFICATION_ERROR:
+			TapticEngine_Notification(NOTIFICATION_ERROR);
+			break;
+		case TAPTIC_SELECTION:
+			TapticEngine_Selection();
+			break;
+		case TAPTIC_FEEDBACK_MAX_ENUM:
+			throw love::Exception("Invalid taptic feedback type.");
+			break;
+	}
+}
+#endif
+
 StringMap<System::PowerState, System::POWER_MAX_ENUM>::Entry System::powerEntries[] =
 {
 	{"unknown", System::POWER_UNKNOWN},
@@ -211,6 +257,24 @@ StringMap<System::PowerState, System::POWER_MAX_ENUM>::Entry System::powerEntrie
 };
 
 StringMap<System::PowerState, System::POWER_MAX_ENUM> System::powerStates(System::powerEntries, sizeof(System::powerEntries));
+
+
+#if defined(LOVE_IOS)
+StringMap<System::TapticFeedback, System::TAPTIC_FEEDBACK_MAX_ENUM>::Entry System::tapticFeedbackEntries[] =
+{
+	{"light", System::TAPTIC_IMPACT_LIGHT},
+	{"medium", System::TAPTIC_IMPACT_MEDIUM},
+	{"heavy", System::TAPTIC_IMPACT_HEAVY},
+	{"success", System::TAPTIC_NOTIFICATION_SUCCESS},
+	{"warning", System::TAPTIC_NOTIFICATION_WARNING},
+	{"error", System::TAPTIC_NOTIFICATION_ERROR},
+	{"selection", System::TAPTIC_SELECTION}
+};
+#endif // LOVE_IOS
+
+#if defined(LOVE_IOS)
+StringMap<System::TapticFeedback, System::TAPTIC_FEEDBACK_MAX_ENUM> System::tapticFeedbacks(System::tapticFeedbackEntries, sizeof(System::tapticFeedbackEntries));
+#endif // LOVE_IOS
 
 } // system
 } // love

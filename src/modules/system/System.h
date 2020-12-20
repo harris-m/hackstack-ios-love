@@ -29,6 +29,25 @@
 // stdlib
 #include <string>
 
+enum ImpactStyle
+{
+	IMPACT_LIGHT,
+	IMPACT_MEDIUM,
+	IMPACT_HEAVY,
+};
+
+enum NotificationType
+{
+	NOTIFICATION_SUCCESS,
+	NOTIFICATION_WARNING,
+	NOTIFICATION_ERROR,
+};
+
+extern bool TapticEngine_IsSupported();
+extern void TapticEngine_Impact(ImpactStyle style);
+extern void TapticEngine_Notification(NotificationType type);
+extern void TapticEngine_Selection();
+
 namespace love
 {
 namespace system
@@ -47,6 +66,20 @@ public:
 		POWER_CHARGED,
 		POWER_MAX_ENUM
 	};
+
+#if defined(LOVE_IOS)
+	enum TapticFeedback
+	{
+		TAPTIC_IMPACT_LIGHT,
+		TAPTIC_IMPACT_MEDIUM,
+		TAPTIC_IMPACT_HEAVY,
+		TAPTIC_NOTIFICATION_SUCCESS,
+		TAPTIC_NOTIFICATION_WARNING,
+		TAPTIC_NOTIFICATION_ERROR,
+		TAPTIC_SELECTION,
+		TAPTIC_FEEDBACK_MAX_ENUM
+	};
+#endif // LOVE_IOS
 
 	System();
 	virtual ~System() {}
@@ -116,11 +149,24 @@ public:
 
 	static bool getConstant(const char *in, PowerState &out);
 	static bool getConstant(PowerState in, const char *&out);
+	#if defined(LOVE_IOS)
+	static bool getConstant(const char *in, TapticFeedback &out);
+	static bool getConstant(TapticFeedback in, const char *&out);
+	
+	static std::vector<std::string> getConstants(TapticFeedback);
+	void taptic(TapticFeedback FeedbackType);
+#endif // LOVE_IOS
+
 
 private:
 
 	static StringMap<PowerState, POWER_MAX_ENUM>::Entry powerEntries[];
 	static StringMap<PowerState, POWER_MAX_ENUM> powerStates;
+#if defined(LOVE_IOS)
+	static StringMap<TapticFeedback, TAPTIC_FEEDBACK_MAX_ENUM>::Entry tapticFeedbackEntries[];
+	static StringMap<TapticFeedback, TAPTIC_FEEDBACK_MAX_ENUM> tapticFeedbacks;
+#endif // LOVE_IOS
+	
 
 }; // System
 

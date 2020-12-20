@@ -101,6 +101,20 @@ int w_hasBackgroundMusic(lua_State *L)
 	return 1;
 }
 
+
+#if defined(LOVE_IOS)
+int w_taptic(lua_State *L)
+{
+	System::TapticFeedback mode;
+	const char *str = luaL_checkstring(L, 1);
+	if (!System::getConstant(str, mode))
+		return luax_enumerror(L, "taptic type", System::getConstants(mode), str);
+	
+	instance()->taptic(mode);
+	return 0;
+}
+#endif // LOVE_IOS
+
 static const luaL_Reg functions[] =
 {
 	{ "getOS", w_getOS },
@@ -111,6 +125,9 @@ static const luaL_Reg functions[] =
 	{ "openURL", w_openURL },
 	{ "vibrate", w_vibrate },
 	{ "hasBackgroundMusic", w_hasBackgroundMusic },
+#if defined(LOVE_IOS)
+	{ "taptic", w_taptic },
+#endif // LOVE_IOS
 	{ 0, 0 }
 };
 
