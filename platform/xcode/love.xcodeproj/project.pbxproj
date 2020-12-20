@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F54C134258FBC0E00A8FCCF /* game.love in Resources */ = {isa = PBXBuildFile; fileRef = 6F54C133258FBC0E00A8FCCF /* game.love */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		A9255DD31043183600BA1496 /* Lua.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A93E6E5310420B57007D418B /* Lua.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A9255E031043195A00BA1496 /* vorbis.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A9255E021043195A00BA1496 /* vorbis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -100,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		6F54C133258FBC0E00A8FCCF /* game.love */ = {isa = PBXFileReference; lastKnownFileType = file; path = game.love; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* love.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = love.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9255E021043195A00BA1496 /* vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vorbis.framework; path = /Library/Frameworks/vorbis.framework; sourceTree = "<absolute>"; };
 		A9255F51104324D700BA1496 /* ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ogg.framework; path = /Library/Frameworks/ogg.framework; sourceTree = "<absolute>"; };
@@ -197,6 +199,7 @@
 		29B97314FDCFA39411CA2CEA /* love */ = {
 			isa = PBXGroup;
 			children = (
+				6F54C133258FBC0E00A8FCCF /* game.love */,
 				FA5D249A1A96CF4300C6FC8F /* Images.xcassets */,
 				FAF5F96C233965DF0030A68A /* love.entitlements */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -328,10 +331,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					FA0B7F051A95AAF3000E1D17 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 94QNLLZLN5;
 					};
 				};
 			};
@@ -393,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F54C134258FBC0E00A8FCCF /* game.love in Resources */,
 				FA5D249C1A96CF4300C6FC8F /* Images.xcassets in Resources */,
 				FA7C636A1A9C49570000FD29 /* Launch Screen.xib in Resources */,
 			);
@@ -438,7 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "OS X AppIcon";
 				CODE_SIGN_ENTITLEMENTS = love.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -461,6 +466,7 @@
 				INFOPLIST_FILE = "macosx/love-macosx.plist";
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
 				PRODUCT_NAME = love;
 			};
@@ -471,7 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "OS X AppIcon";
 				CODE_SIGN_ENTITLEMENTS = love.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -493,6 +499,7 @@
 				INFOPLIST_FILE = "macosx/love-macosx.plist";
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
 				PRODUCT_NAME = love;
 			};
@@ -519,6 +526,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -557,7 +565,7 @@
 					"\"$(SRCROOT)/../../src/modules\"",
 				);
 				INFOPLIST_FILE = "love-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -598,6 +606,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -638,7 +647,7 @@
 					"\"$(SRCROOT)/../../src/modules\"",
 				);
 				INFOPLIST_FILE = "love-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -676,7 +685,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94QNLLZLN5;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -702,12 +711,13 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/love-ios.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tunks.hackstack;
 				PRODUCT_NAME = love;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -727,7 +737,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94QNLLZLN5;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -748,12 +758,13 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/love-ios.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tunks.hackstack;
 				PRODUCT_NAME = love;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -774,7 +785,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94QNLLZLN5;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -795,12 +806,13 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/love-ios.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tunks.hackstack;
 				PRODUCT_NAME = love;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
@@ -826,6 +838,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -866,7 +879,7 @@
 					"\"$(SRCROOT)/../../src/modules\"",
 				);
 				INFOPLIST_FILE = "love-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -893,7 +906,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "OS X AppIcon";
 				CODE_SIGN_ENTITLEMENTS = love.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -915,6 +928,7 @@
 				INFOPLIST_FILE = "macosx/love-macosx.plist";
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
 				PRODUCT_NAME = love;
 			};
