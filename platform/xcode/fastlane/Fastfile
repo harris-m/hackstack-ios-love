@@ -1,0 +1,51 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+	desc "Push a new beta build to TestFlight"
+	lane :beta do
+		increment_version_number_in_plist(
+			xcodeproj: "love.xcodeproj/",
+			target: "love-ios"
+		)
+		match(type: "appstore")
+		#sync_code_signing(type: "appstore", username: "harrismunir@gmail.com")
+		build_app(
+			scheme: "love-ios",
+			include_symbols: true,
+			include_bitcode: true
+		)
+		upload_to_testflight
+		# slack(message: "Successfully distributed a new beta build to testflight")
+	end
+
+	lane :release do
+		increment_version_number_in_plist(
+			xcodeproj: "love.xcodeproj/",
+			target: "love-ios"
+		)
+		match(type: "appstore")
+		#sync_code_signing(type: "appstore", username: "harrismunir@gmail.com")
+		build_app(
+			scheme: "love-ios",
+			include_symbols: true,
+			include_bitcode: true
+		)
+		upload_to_app_store       # Upload the screenshots and the binary to iTunes
+	end
+
+end

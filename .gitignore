@@ -57,3 +57,5 @@ stamp-h1
 /src/love
 /src/tags
 /platform/xcode/game.love
+platform/xcode/love.app.dSYM.zip
+platform/xcode/love.ipa

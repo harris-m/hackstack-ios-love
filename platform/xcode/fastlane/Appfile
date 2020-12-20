@@ -1,0 +1,8 @@
+app_identifier("com.tunks.hackstack") # The bundle identifier of your app
+apple_id("harrismunir@gmail.com") # Your Apple email address
+
+itc_team_id("118168127") # App Store Connect Team ID
+team_id("94QNLLZLN5") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
