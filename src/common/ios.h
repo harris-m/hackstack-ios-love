@@ -90,6 +90,25 @@ void destroyAudioSessionInterruptionHandler();
  **/
 Rect getSafeArea(SDL_Window *window);
 
+/**
+ * Restore the user's purchases.
+ */
+void restorePurchases();
+
+/**
+ * Query whether or not a user has a given purchase.
+ **/
+bool hasPurchase(const std::string &productIdentifier);
+
+/**
+ * Refresh the purchase status of things.
+ **/
+
+/**
+ * Initiate a menu to make a purchase.
+ **/
+void makePurchase(const std::string &productIdentifier);
+
 } // ios
 } // love
 

@@ -65,6 +65,7 @@
 		217DFC111D9F6D490055D849 /* usocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 217DFBD51D9F6D490055D849 /* usocket.c */; };
 		217DFC121D9F6D490055D849 /* usocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 217DFBD61D9F6D490055D849 /* usocket.h */; };
 		6F47DE01258FC65B00745A89 /* System.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F47DE00258FC65B00745A89 /* System.mm */; };
+		6FC9D8392594FC3A00812444 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC9D8372594FC3900812444 /* InAppPurchase.m */; };
 		FA0A3A5F23366CE9001C269E /* floattypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0A3A5D23366CE9001C269E /* floattypes.h */; };
 		FA0A3A6023366CE9001C269E /* floattypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0A3A5E23366CE9001C269E /* floattypes.cpp */; };
 		FA0A3A6123366CE9001C269E /* floattypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0A3A5E23366CE9001C269E /* floattypes.cpp */; };
@@ -1282,6 +1283,8 @@
 		217DFBD61D9F6D490055D849 /* usocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usocket.h; sourceTree = "<group>"; };
 		503971A86B7167A91B670FBA /* boot.lua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = boot.lua.h; sourceTree = "<group>"; };
 		6F47DE00258FC65B00745A89 /* System.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = System.mm; sourceTree = "<group>"; };
+		6FC9D8362594FC3900812444 /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchase.h; sourceTree = "<group>"; };
+		6FC9D8372594FC3900812444 /* InAppPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
 		FA08F5AE16C7525600F007B5 /* liblove-macosx.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "liblove-macosx.plist"; path = "macosx/liblove-macosx.plist"; sourceTree = "<group>"; };
 		FA0A3A5D23366CE9001C269E /* floattypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = floattypes.h; sourceTree = "<group>"; };
 		FA0A3A5E23366CE9001C269E /* floattypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = floattypes.cpp; sourceTree = "<group>"; };
@@ -2201,6 +2204,8 @@
 				FA0B79151A958E3B000E1D17 /* Variant.h */,
 				FA0B79161A958E3B000E1D17 /* Vector.cpp */,
 				FA0B79171A958E3B000E1D17 /* Vector.h */,
+				6FC9D8362594FC3900812444 /* InAppPurchase.h */,
+				6FC9D8372594FC3900812444 /* InAppPurchase.m */,
 				FA0B79181A958E3B000E1D17 /* version.h */,
 			);
 			name = common;
@@ -4531,6 +4536,7 @@
 				FA0B7DBF1A95902C000E1D17 /* JoystickModule.cpp in Sources */,
 				FAB2D5AB1AABDD8A008224A4 /* TrueTypeRasterizer.cpp in Sources */,
 				FA0B7A9F1A958EA3000E1D17 /* b2PrismaticJoint.cpp in Sources */,
+				6FC9D8392594FC3A00812444 /* InAppPurchase.m in Sources */,
 				FA1BA0AD1E16F9EE00AA2803 /* wrap_Canvas.cpp in Sources */,
 				FAE64A822071363100BC7981 /* physfs_archiver_grp.c in Sources */,
 				FA0B79331A958E3B000E1D17 /* Object.cpp in Sources */,

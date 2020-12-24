@@ -191,6 +191,31 @@ bool System::hasBackgroundMusic() const
 #endif
 }
 
+void System::restorePurchases() const
+		{
+#if defined(LOVE_IOS)
+			love::ios::restorePurchases();
+#else
+			return;
+#endif
+		}
+		
+		bool System::hasPurchase(const std::string &productIdentifier) const
+		{
+#if defined(LOVE_IOS)
+			return love::ios::hasPurchase(productIdentifier);
+#else
+			return false;
+#endif
+		}
+		
+		void System::makePurchase(const std::string &productIdentifier) const
+		{
+#if defined(LOVE_IOS)
+			love::ios::makePurchase(productIdentifier);
+#endif
+		}
+
 bool System::getConstant(const char *in, System::PowerState &out)
 {
 	return powerStates.find(in, out);

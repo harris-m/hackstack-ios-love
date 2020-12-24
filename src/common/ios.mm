@@ -31,7 +31,7 @@
 #include "modules/audio/Audio.h"
 
 #include <vector>
-
+#include "InAppPurchase.h"
 #include <SDL_events.h>
 #include <SDL_video.h>
 #include <SDL_syswm.h>
@@ -253,7 +253,7 @@ namespace love
 {
 namespace ios
 {
-
+IAPResponder *iap = [[IAPResponder alloc] init];
 /**
  * Displays a full-screen list of available LOVE games for the user to choose.
  * Returns the index of the selected game from the list. The list of games
@@ -486,6 +486,27 @@ Rect getSafeArea(SDL_Window *window)
 		}
 
 		return rect;
+	}
+}
+
+
+
+void restorePurchases()
+{
+	return [iap restorePurchases];
+}
+
+bool hasPurchase(const std::string &productIdentifier)
+{
+	return [iap queryPurchase:[NSString stringWithUTF8String:productIdentifier.c_str()]];
+}
+
+void makePurchase(const std::string &productIdentifier)
+{
+	if([SKPaymentQueue canMakePayments]){
+		SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:[NSString stringWithUTF8String:productIdentifier.c_str()]]];
+		productsRequest.delegate = iap;
+		[productsRequest start];
 	}
 }
 
