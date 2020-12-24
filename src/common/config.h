@@ -161,6 +161,7 @@
 #	define LOVE_ENABLE_ENET
 #	define LOVE_ENABLE_LUASOCKET
 #	define LOVE_ENABLE_LUA53
+#	define LOVE_ENABLE_ADS
 #endif
 
 // Check we have a sane configuration

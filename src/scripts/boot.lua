@@ -422,6 +422,7 @@ function love.init()
 			thread = true,
 			window = true,
 			video = true,
+			ads = true,
 		},
 		audio = {
 			mixwithsystem = true, -- Only relevant for Android / iOS.
@@ -500,6 +501,7 @@ function love.init()
 		"graphics",
 		"math",
 		"physics",
+		"ads",
 	} do
 		if c.modules[v] then
 			require("love." .. v)
@@ -589,6 +591,11 @@ function love.run()
 	if love.timer then love.timer.step() end
 
 	local dt = 0
+	
+	if love.ads then
+		love.ads.timer = 0
+		love.ads.updateTime = 1 --Seconds
+	end
 
 	-- Main loop time.
 	return function()
@@ -618,6 +625,14 @@ function love.run()
 			if love.draw then love.draw() end
 
 			love.graphics.present()
+		end
+		
+		if love.ads and love.checkForAdsCallbacks and love.ads.timer and love.ads.updateTime then
+			if love.ads.timer > 1 then
+				love.checkForAdsCallbacks()
+				love.ads.timer = 0
+			end
+			love.ads.timer = love.ads.timer + dt
 		end
 
 		if love.timer then love.timer.sleep(0.001) end
@@ -757,6 +772,46 @@ function love.errhand(msg)
 
 		if love.timer then
 			love.timer.sleep(0.1)
+		end
+	end
+
+end
+
+function love.checkForAdsCallbacks()
+	if not love.ads then return end
+
+	if love.ads.coreInterstitialError() then --Interstitial failed to load
+		if love.interstitialFailedToLoad then
+			love.interstitialFailedToLoad()
+		end
+	end
+
+	if love.ads.coreInterstitialClosed() then --User has closed the ad
+		if love.interstitialClosed then
+			love.interstitialClosed()
+		end
+	end
+
+	if love.ads.coreRewardedAdError() then --Rewarded ad failed to load
+		if love.rewardedAdFailedToLoad then
+			love.rewardedAdFailedToLoad()
+		end
+	end
+
+	if love.ads.coreRewardedAdDidFinish() then --Video has finished playing
+		local rewardType = "???"
+		local rewardQuantity = 1
+		rewardType = love.ads.coreGetRewardType() or "???"
+		rewardQuantity = love.ads.coreGetRewardQuantity() or 1
+
+		if love.rewardUserWithReward then
+			love.rewardUserWithReward(rewardType,rewardQuantity)
+		end
+	end
+
+	if love.ads.coreRewardedAdDidStop() then --Video has stopped by user
+		if love.rewardedAdDidStop then
+			love.rewardedAdDidStop()
 		end
 	end
 

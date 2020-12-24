@@ -125,6 +125,8 @@ public:
 
 	void requestAttention(bool continuous) override;
 
+	SDL_Window *getWindowObj() const;
+	
 	const char *getName() const override;
 
 private:

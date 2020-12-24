@@ -64,6 +64,17 @@
 		217DFC101D9F6D490055D849 /* url.lua.h in Headers */ = {isa = PBXBuildFile; fileRef = 217DFBD41D9F6D490055D849 /* url.lua.h */; };
 		217DFC111D9F6D490055D849 /* usocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 217DFBD51D9F6D490055D849 /* usocket.c */; };
 		217DFC121D9F6D490055D849 /* usocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 217DFBD61D9F6D490055D849 /* usocket.h */; };
+		6F175A712595164D004D5624 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175A6D2595164C004D5624 /* GoogleMobileAds.framework */; };
+		6F175A722595164D004D5624 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175A6E2595164C004D5624 /* GoogleAppMeasurement.framework */; };
+		6F175A732595164D004D5624 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175A6F2595164C004D5624 /* nanopb.framework */; };
+		6F175A742595164D004D5624 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175A702595164C004D5624 /* GoogleUtilities.framework */; };
+		6F175A83259520B1004D5624 /* VideoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F175A78259520B0004D5624 /* VideoDelegate.m */; };
+		6F175A84259520B1004D5624 /* wrap_Ads.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F175A79259520B0004D5624 /* wrap_Ads.mm */; };
+		6F175A85259520B1004D5624 /* BannerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F175A7C259520B0004D5624 /* BannerDelegate.m */; };
+		6F175A86259520B1004D5624 /* Ads.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F175A7E259520B1004D5624 /* Ads.mm */; };
+		6F175A87259520B1004D5624 /* InterstitialDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F175A82259520B1004D5624 /* InterstitialDelegate.m */; };
+		6F175B1E25952362004D5624 /* PersonalizedAdConsent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175B1D25952362004D5624 /* PersonalizedAdConsent.framework */; };
+		6F175B37259526C7004D5624 /* Ads.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F175B36259526C7004D5624 /* Ads.mm */; };
 		6F47DE01258FC65B00745A89 /* System.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F47DE00258FC65B00745A89 /* System.mm */; };
 		6FC9D8392594FC3A00812444 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC9D8372594FC3900812444 /* InAppPurchase.m */; };
 		FA0A3A5F23366CE9001C269E /* floattypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0A3A5D23366CE9001C269E /* floattypes.h */; };
@@ -1282,6 +1293,23 @@
 		217DFBD51D9F6D490055D849 /* usocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = usocket.c; sourceTree = "<group>"; };
 		217DFBD61D9F6D490055D849 /* usocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usocket.h; sourceTree = "<group>"; };
 		503971A86B7167A91B670FBA /* boot.lua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = boot.lua.h; sourceTree = "<group>"; };
+		6F175A6D2595164C004D5624 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		6F175A6E2595164C004D5624 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		6F175A6F2595164C004D5624 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		6F175A702595164C004D5624 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		6F175A78259520B0004D5624 /* VideoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDelegate.m; sourceTree = "<group>"; };
+		6F175A79259520B0004D5624 /* wrap_Ads.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wrap_Ads.mm; sourceTree = "<group>"; };
+		6F175A7B259520B0004D5624 /* wrap_Ads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrap_Ads.h; sourceTree = "<group>"; };
+		6F175A7C259520B0004D5624 /* BannerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerDelegate.m; sourceTree = "<group>"; };
+		6F175A7D259520B0004D5624 /* InterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialDelegate.h; sourceTree = "<group>"; };
+		6F175A7E259520B1004D5624 /* Ads.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Ads.mm; sourceTree = "<group>"; };
+		6F175A7F259520B1004D5624 /* VideoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDelegate.h; sourceTree = "<group>"; };
+		6F175A80259520B1004D5624 /* BannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerDelegate.h; sourceTree = "<group>"; };
+		6F175A81259520B1004D5624 /* Ads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ads.h; sourceTree = "<group>"; };
+		6F175A82259520B1004D5624 /* InterstitialDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialDelegate.m; sourceTree = "<group>"; };
+		6F175B1D25952362004D5624 /* PersonalizedAdConsent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PersonalizedAdConsent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F175B35259526C7004D5624 /* Ads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ads.h; sourceTree = "<group>"; };
+		6F175B36259526C7004D5624 /* Ads.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Ads.mm; sourceTree = "<group>"; };
 		6F47DE00258FC65B00745A89 /* System.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = System.mm; sourceTree = "<group>"; };
 		6FC9D8362594FC3900812444 /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchase.h; sourceTree = "<group>"; };
 		6FC9D8372594FC3900812444 /* InAppPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
@@ -2075,11 +2103,16 @@
 			files = (
 				FA5D24B51A96D2EC00C6FC8F /* libvorbis.a in Frameworks */,
 				FAE64A7F207135AD00BC7981 /* libfreetype.a in Frameworks */,
+				6F175A732595164D004D5624 /* nanopb.framework in Frameworks */,
+				6F175A722595164D004D5624 /* GoogleAppMeasurement.framework in Frameworks */,
+				6F175A712595164D004D5624 /* GoogleMobileAds.framework in Frameworks */,
 				FA5D24B31A96D2EC00C6FC8F /* libogg.a in Frameworks */,
 				FA59A2D81C0649C200328DBA /* libtheora.a in Frameworks */,
 				FA56D9BC1C208A0200D8D3C7 /* libmodplug.a in Frameworks */,
 				FA7550A81AEBE276003E311E /* libluajit.a in Frameworks */,
 				FA5D24CF1A96E68300C6FC8F /* libSDL2.a in Frameworks */,
+				6F175B1E25952362004D5624 /* PersonalizedAdConsent.framework in Frameworks */,
+				6F175A742595164D004D5624 /* GoogleUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2142,6 +2175,33 @@
 			name = love;
 			sourceTree = "<group>";
 			usesTabs = 1;
+		};
+		6F175A772595203A004D5624 /* ads */ = {
+			isa = PBXGroup;
+			children = (
+				6F175B3425952691004D5624 /* sdl */,
+				6F175A81259520B1004D5624 /* Ads.h */,
+				6F175A7E259520B1004D5624 /* Ads.mm */,
+				6F175A80259520B1004D5624 /* BannerDelegate.h */,
+				6F175A7C259520B0004D5624 /* BannerDelegate.m */,
+				6F175A7D259520B0004D5624 /* InterstitialDelegate.h */,
+				6F175A82259520B1004D5624 /* InterstitialDelegate.m */,
+				6F175A7F259520B1004D5624 /* VideoDelegate.h */,
+				6F175A78259520B0004D5624 /* VideoDelegate.m */,
+				6F175A7B259520B0004D5624 /* wrap_Ads.h */,
+				6F175A79259520B0004D5624 /* wrap_Ads.mm */,
+			);
+			path = ads;
+			sourceTree = "<group>";
+		};
+		6F175B3425952691004D5624 /* sdl */ = {
+			isa = PBXGroup;
+			children = (
+				6F175B35259526C7004D5624 /* Ads.h */,
+				6F175B36259526C7004D5624 /* Ads.mm */,
+			);
+			path = sdl;
+			sourceTree = "<group>";
 		};
 		FA08F5AC16C751BA00F007B5 /* Resources */ = {
 			isa = PBXGroup;
@@ -2603,6 +2663,7 @@
 		FA0B7B3C1A95902C000E1D17 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				6F175A772595203A004D5624 /* ads */,
 				FA0B7B3D1A95902C000E1D17 /* audio */,
 				FACA02DF1F5E396B0084B28F /* data */,
 				FA0B7B521A95902C000E1D17 /* event */,
@@ -3386,6 +3447,11 @@
 		FA577A6616C7199700860150 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F175B1D25952362004D5624 /* PersonalizedAdConsent.framework */,
+				6F175A6E2595164C004D5624 /* GoogleAppMeasurement.framework */,
+				6F175A6D2595164C004D5624 /* GoogleMobileAds.framework */,
+				6F175A702595164C004D5624 /* GoogleUtilities.framework */,
+				6F175A6F2595164C004D5624 /* nanopb.framework */,
 				FA0B7EEB1A959125000E1D17 /* macosx */,
 			);
 			name = Frameworks;
@@ -4319,6 +4385,7 @@
 				FA0B7E431A95902C000E1D17 /* wrap_CircleShape.cpp in Sources */,
 				FAE64A912071364800BC7981 /* physfs.c in Sources */,
 				FAE64A852071363100BC7981 /* physfs_archiver_mvl.c in Sources */,
+				6F175B37259526C7004D5624 /* Ads.mm in Sources */,
 				FA0B7CE61A95902C000E1D17 /* wrap_Source.cpp in Sources */,
 				FA0B7AA21A958EA3000E1D17 /* b2PulleyJoint.cpp in Sources */,
 				FA9D8DDE1DEF842A002CD881 /* Drawable.cpp in Sources */,
@@ -4339,6 +4406,7 @@
 				FACA02FC1F5E39810084B28F /* wrap_CompressedData.cpp in Sources */,
 				FAF140AD1E20934C00F898D2 /* Versions.cpp in Sources */,
 				FA0B7A7B1A958EA3000E1D17 /* b2Contact.cpp in Sources */,
+				6F175A86259520B1004D5624 /* Ads.mm in Sources */,
 				FA0B7A6F1A958EA3000E1D17 /* b2WorldCallbacks.cpp in Sources */,
 				FA0B793C1A958E3B000E1D17 /* runtime.cpp in Sources */,
 				FAF140DC1E20934C00F898D2 /* InitializeDll.cpp in Sources */,
@@ -4417,8 +4485,10 @@
 				FAF188A01E9DBC4B008C1479 /* depthstencil.cpp in Sources */,
 				FA0B7D071A95902C000E1D17 /* wrap_File.cpp in Sources */,
 				FA6A2B751F60B6710074C308 /* ByteData.cpp in Sources */,
+				6F175A84259520B1004D5624 /* wrap_Ads.mm in Sources */,
 				FAD19A181DFF8CA200D5398A /* ImageDataBase.cpp in Sources */,
 				FA0B7AD01A958EA3000E1D17 /* peer.c in Sources */,
+				6F175A83259520B1004D5624 /* VideoDelegate.m in Sources */,
 				FA27B3C11B4985BF008A9DCE /* wrap_VideoStream.cpp in Sources */,
 				FADF54211E3DA52C00012CC0 /* wrap_ParticleSystem.cpp in Sources */,
 				FA0B791C1A958E3B000E1D17 /* b64.cpp in Sources */,
@@ -4511,6 +4581,7 @@
 				FA0B7E9E1A95902C000E1D17 /* WaveDecoder.cpp in Sources */,
 				FA0B7EB31A95902C000E1D17 /* System.cpp in Sources */,
 				FA0B7D1C1A95902C000E1D17 /* GlyphData.cpp in Sources */,
+				6F175A85259520B1004D5624 /* BannerDelegate.m in Sources */,
 				FA4F2C061DE936CD00CA37D7 /* except.c in Sources */,
 				FA0B7AAE1A958EA3000E1D17 /* b2WheelJoint.cpp in Sources */,
 				FA15DFB01F9B8D6A0042AB22 /* wrap_Data.cpp in Sources */,
@@ -4536,6 +4607,7 @@
 				FA0B7DBF1A95902C000E1D17 /* JoystickModule.cpp in Sources */,
 				FAB2D5AB1AABDD8A008224A4 /* TrueTypeRasterizer.cpp in Sources */,
 				FA0B7A9F1A958EA3000E1D17 /* b2PrismaticJoint.cpp in Sources */,
+				6F175A87259520B1004D5624 /* InterstitialDelegate.m in Sources */,
 				6FC9D8392594FC3A00812444 /* InAppPurchase.m in Sources */,
 				FA1BA0AD1E16F9EE00AA2803 /* wrap_Canvas.cpp in Sources */,
 				FAE64A822071363100BC7981 /* physfs_archiver_grp.c in Sources */,
@@ -5126,6 +5198,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					LOVE_SUPPORT_COREAUDIO,
@@ -5168,6 +5244,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					LOVE_SUPPORT_COREAUDIO,
@@ -5210,6 +5290,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					LOVE_SUPPORT_COREAUDIO,

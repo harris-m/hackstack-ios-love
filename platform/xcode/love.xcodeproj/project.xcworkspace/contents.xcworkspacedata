@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:love.xcodeproj">
+      location = "group:../PersonalizedAdConsent.bundle">
+   </FileRef>
+   <FileRef
+      location = "group:../PersonalizedAdConsent.framework">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

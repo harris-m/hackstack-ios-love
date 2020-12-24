@@ -32,6 +32,9 @@
 #include <string>
 #include <vector>
 
+#include <SDL.h>
+#include <SDL_syswm.h>
+
 namespace love
 {
 

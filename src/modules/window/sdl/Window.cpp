@@ -1256,6 +1256,12 @@ void Window::requestAttention(bool continuous)
 	// TODO: Linux?
 }
 
+
+SDL_Window *Window::getWindowObj() const
+{
+	return window;
+}
+
 const char *Window::getName() const
 {
 	return "love.window.sdl";
