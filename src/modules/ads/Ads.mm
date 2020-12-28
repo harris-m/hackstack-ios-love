@@ -78,9 +78,9 @@ GADExtras *requestExtras = [[GADExtras alloc] init];
 		
 Ads::Ads()
 {
-	this->privacyURL = [NSURL URLWithString:@"http://YOUR_PRIVACY_POLICY.com"];
-	this->applicationID = @"ca-app-pub-3940256099942544~1458002511";
-	this->publisherID = @"pub-3940256099942544"; //Your publisher ID
+	this->privacyURL = [NSURL URLWithString:@"https://tunks.games/hackstack-privacy-policy/"];
+	this->applicationID = @"ca-app-pub-2848378799294763~6518961681";
+	this->publisherID = @"pub-2848378799294763"; //Your publisher ID
 	this->collectConsent = true;
 	
 	[[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
@@ -223,7 +223,7 @@ void Ads::createBanner(const char *adID, const char *position) {
 		bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
 	}
 	
-    //ADAPTIVE BANNER
+	//ADAPTIVE BANNER
 	//bannerView = [[GADBannerView alloc] initWithAdSize:GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(screenWidth)];
 	
 	
@@ -497,7 +497,7 @@ std::string Ads::getDeviceLanguage()
 	NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
 	NSDictionary *languageDic = [NSLocale componentsFromLocaleIdentifier:language];
 	NSString *languageCode = [languageDic objectForKey:@"kCFLocaleLanguageCodeKey"];
-	languageCode  = [languageCode uppercaseString];	
+	languageCode  = [languageCode uppercaseString];
 	
 	return std::string([languageCode UTF8String]);
 }
