@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F175A692595162D004D5624 /* xcode in Resources */ = {isa = PBXBuildFile; fileRef = 6F175A682595162D004D5624 /* xcode */; };
-		6F175B0B259522EF004D5624 /* PersonalizedAdConsent.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F175AF6259522EF004D5624 /* PersonalizedAdConsent.bundle */; };
 		6F175B2925952622004D5624 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175B2525952621004D5624 /* GoogleMobileAds.framework */; };
 		6F175B2A25952622004D5624 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175B2625952621004D5624 /* GoogleUtilities.framework */; };
 		6F175B2B25952622004D5624 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F175B2725952621004D5624 /* nanopb.framework */; };
@@ -115,7 +113,7 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		6F175A682595162D004D5624 /* xcode */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xcode; sourceTree = "<group>"; };
+		6F175A682595162D004D5624 /* xcode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcode; sourceTree = "<group>"; };
 		6F175AF6259522EF004D5624 /* PersonalizedAdConsent.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PersonalizedAdConsent.bundle; sourceTree = "<group>"; };
 		6F175B1625952313004D5624 /* PersonalizedAdConsent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PersonalizedAdConsent.xcodeproj; path = PersonalizedAdConsent/PersonalizedAdConsent.xcodeproj; sourceTree = "<group>"; };
 		6F175B2525952621004D5624 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -449,11 +447,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F175A692595162D004D5624 /* xcode in Resources */,
 				6F54C134258FBC0E00A8FCCF /* game.love in Resources */,
 				FA5D249C1A96CF4300C6FC8F /* Images.xcassets in Resources */,
 				FA7C636A1A9C49570000FD29 /* Launch Screen.xib in Resources */,
-				6F175B0B259522EF004D5624 /* PersonalizedAdConsent.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
