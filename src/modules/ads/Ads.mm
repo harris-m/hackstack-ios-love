@@ -81,7 +81,7 @@ Ads::Ads()
 	this->privacyURL = [NSURL URLWithString:@"https://tunks.games/hackstack-privacy-policy/"];
 	this->applicationID = @"ca-app-pub-2848378799294763~6518961681";
 	this->publisherID = @"pub-2848378799294763"; //Your publisher ID
-	this->collectConsent = true;
+	this->collectConsent = false;
 	
 	[[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
 	
