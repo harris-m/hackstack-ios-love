@@ -86,7 +86,7 @@ Ads::Ads()
 	[[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
 	
 	GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =
-	@[ @"Simulator" ];
+	@[ @"Simulator", @"C87C2AC9B96146979E1C64DA77585ECC"];
 	
 	//Consent
 	if (this->collectConsent)
